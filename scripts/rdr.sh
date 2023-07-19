@@ -22,6 +22,9 @@ EOF
 
 sleep 60
 
+## Enable MCO odf-multicluster-console dynamic plugin
+oc patch console.v1.operator.openshift.io cluster --type=json -p="[{'op': 'add', 'path': '/spec/plugins', 'value':[odf-multicluster-console]}]"
+
 ## Create first DRPolicy
 cat <<EOF | oc apply -f -
 apiVersion: ramendr.openshift.io/v1alpha1
