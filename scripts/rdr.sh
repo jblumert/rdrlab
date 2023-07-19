@@ -25,6 +25,26 @@ sleep 60
 ## Enable MCO odf-multicluster-console dynamic plugin
 oc patch console.v1.operator.openshift.io cluster --type=json -p="[{'op': 'add', 'path': '/spec/plugins', 'value':[odf-multicluster-console]}]"
 
+## Create OpenShift Gitops subscription on hub cluster (ApplicationSet CRD required):
+cat <<EOF | oc apply -f -
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  labels:
+    operators.coreos.com/openshift-gitops-operator.openshift-operators: ""
+  name: openshift-gitops-operator
+  namespace: openshift-operators
+spec:
+  channel: latest
+  installPlanApproval: Automatic
+  name: openshift-gitops-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: openshift-gitops-operator.v1.9.1
+EOF
+
+sleep 15
+
 ## Create first DRPolicy
 cat <<EOF | oc apply -f -
 apiVersion: ramendr.openshift.io/v1alpha1
