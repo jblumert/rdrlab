@@ -1,0 +1,44 @@
+WARNING: Using insecure TLS client config. Setting this option is not supported!
+
+Login successful.
+
+You have access to 79 projects, the list has been suppressed. You can list all projects with 'oc projects'
+
+Using project "open-cluster-management".
+namespace/cluster1 unchanged
+managedcluster.cluster.open-cluster-management.io/cluster1 created
+namespace/cluster2 unchanged
+managedcluster.cluster.open-cluster-management.io/cluster2 created
+error: error when retrieving current configuration of:
+Resource: "agent.open-cluster-management.io/v1, Resource=klusterletaddonconfigs", GroupVersionKind: "agent.open-cluster-management.io/v1, Kind=KlusterletAddonConfig"
+Name: "", Namespace: "open-cluster-management"
+from server for: "STDIN": resource name may not be empty
+error: error when retrieving current configuration of:
+Resource: "agent.open-cluster-management.io/v1, Resource=klusterletaddonconfigs", GroupVersionKind: "agent.open-cluster-management.io/v1, Kind=KlusterletAddonConfig"
+Name: "", Namespace: "open-cluster-management"
+from server for: "STDIN": resource name may not be empty
+WARNING: Using insecure TLS client config. Setting this option is not supported!
+
+Login successful.
+
+You have access to 70 projects, the list has been suppressed. You can list all projects with 'oc projects'
+
+Using project "default".
+error: unknown shorthand flag: 'o' in -o
+See 'oc login --help' for usage.
+Error from server (NotFound): error when creating "STDIN": namespaces "cluster1" not found
+The server uses a certificate signed by an unknown authority.
+You can bypass the certificate check, but any data you send to the server could be intercepted by others.
+Use insecure connections? (y/n): y
+
+WARNING: Using insecure TLS client config. Setting this option is not supported!
+
+Login successful.
+
+You have access to 70 projects, the list has been suppressed. You can list all projects with 'oc projects'
+
+Using project "default".
+error: unknown shorthand flag: 'o' in -o
+See 'oc login --help' for usage.
+Error from server (NotFound): error when creating "STDIN": namespaces "cluster2" not found
+
