@@ -8,7 +8,7 @@
 :experimental:
 :source-highlighter: pygments
 :hide-uri-scheme:
-:imagedir: ../images
+:imagesdir: ../images/
 
 == Overview
 
