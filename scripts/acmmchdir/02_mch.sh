@@ -32,7 +32,7 @@ EOF
 
 # wait for MCH to be created
 STATE=`oc get mch -n open-cluster-management -o=jsonpath='{.items[0].status.phase}{"\n"}'`
-while [ $STATE != "Running" ]
+while [x$STATE != "xRunning" ]
 do
  sleep 1
  echo "MCH state = $STATE"
