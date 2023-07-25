@@ -12,12 +12,12 @@ metadata:
   name: odf-multicluster-orchestrator
   namespace: openshift-operators
 spec:
-  channel: stable-4.13
+  channel: stable-4.12
   installPlanApproval: Automatic
   name: odf-multicluster-orchestrator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: odf-multicluster-orchestrator.v4.13.0-rhodf
+  startingCSV: odf-multicluster-orchestrator.v4.12.4-rhodf
 EOF
 
 sleep 60
