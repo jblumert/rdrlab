@@ -17,7 +17,7 @@ spec:
   name: odf-multicluster-orchestrator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: odf-multicluster-orchestrator.v4.12.4-rhodf
+  startingCSV: odf-multicluster-orchestrator.v4.12.5-rhodf
 EOF
 
 sleep 60
